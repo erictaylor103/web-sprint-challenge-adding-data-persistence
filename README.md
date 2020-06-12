@@ -48,11 +48,29 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain the difference between `Relational Databases` and `SQL`.
 
+  SQL: is a software system that allows Defining, Creation, Querying, Update, and Administration of data stored in data files.
+	-SQL has less or no provisions for: Constraints, security, users, etc
+	-SQL has no relationship between data
+	-SQL has no normalization present
+
+  Relational Databases: is a DBMS that is based on Relational model that stores data in tabular form.
+	-Data is stored in the form of tables which are seated to each other
+	-Stores data in a tabular form
+	-Multiple	data elements can be accessed at the same time
+	-Normalization is present
+
 2. Why do tables need a `primary key`?
 
+  A primary key is needed to ensure data in the specific column is unique. This way we can access that specific piece of data with no errors. Since the primary key is unique, we will always be able to retrieve the correct piece of data attached to that primary key.
+
 3. What is the name given to a table column that references the primary key on another table.
+  
+  Foreign Key
+
 
 4. What do we need in order to have a _many to many_ relationship between two tables.
+
+  We need an intermediary table that holds foreign keys that reference the primary key on the related tables.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 

@@ -1,0 +1,26 @@
+// Update with your config settings.
+
+module.exports = {
+
+  development: {
+
+    client: 'sqlite3',
+    connection: {
+      filename: './data/database_file.db3',
+    },
+    
+    useNullAsDefault: true,
+    migrations: {
+    directory: './migrations'
+  },
+  seeds: {
+    directory: './seeds'
+  },
+  pool: {
+    afterCreate: function(conn, done){
+      conn.run('PRAGMA foreign_keys = ON', done); //turn on foreign keys
+    }
+  }
+},
+
+};
