@@ -31,7 +31,7 @@ exports.up = function(knex) {
  })
 
  .createTable('project_resources', tbl => {
-   tbl.increments();
+   //tbl.increments();
    tbl
    .integer('project_id')
    .unsigned()
@@ -46,7 +46,7 @@ exports.up = function(knex) {
    .inTable('resources')
    .onDelete('RESTRICT')
    .onUpdate('CASCADE')        
-
+   tbl.primary(['project_id', 'resource_id'])
  }) 
 };
 
